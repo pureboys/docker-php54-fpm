@@ -64,6 +64,6 @@ COPY ./conf/www.conf /etc/php5/fpm/pool.d/www.conf
 
 CMD ["php5-fpm"]
 
-WORKDIR /web
+WORKDIR /data
 
 
