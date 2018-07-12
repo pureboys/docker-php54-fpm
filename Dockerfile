@@ -58,9 +58,9 @@ RUN apt-get update && apt-get install -y php5-cli \
 	php5-redis \
 	php5-mongo
 
-RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
-
 COPY ./conf/www.conf /etc/php5/fpm/pool.d/www.conf
+
+RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
 
 CMD ["php5-fpm"]
 
